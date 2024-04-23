@@ -119,8 +119,6 @@ def validate_single_epoch(
             preds.append(output)
     return losses, preds
 
-
-
 def train(
     model:torch.nn.Module, 
     train_data_loader:DataLoader,
