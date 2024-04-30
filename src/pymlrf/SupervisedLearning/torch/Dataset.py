@@ -8,13 +8,15 @@ __all__ = [
 
 @dataclass
 class DatasetOutput:
-    """Class for defining standarised output from DataLoaders
-
-    Args:
-        input (Dict[str,torch.Tensor]): The input to the model forward
-        output (Dict[str,torch.Tensor]): The output to be passed to the loss 
-        function
     """
-    input:Dict[str,torch.Tensor]
-    output:Dict[str,torch.Tensor]
-        
+    Class for defining standardized output from DataLoaders as a tuple format,
+    where the first element of the tuple is the input data to the model, and the
+    second element is the target data for the loss function. This format is commonly
+    used for straightforward model training pipelines in PyTorch.
+
+    Attributes:
+        inputs (torch.Tensor): The input tensors to the model.
+        targets (torch.Tensor): The target tensors for the loss calculation.
+    """
+    inputs: torch.Tensor
+    targets: torch.Tensor
